@@ -11,7 +11,7 @@ gg_p <- ggsurvplot(survfit(Surv(time, status) ~1, conf.type="plain", conf.int=0.
 
 gg_p <- ggsurvplot(survfit(Surv(time, status) ~ph.ecog, conf.type="plain", conf.int=0.95, data = lung), conf.int = T)
 
-
+# note palette name change from "tableau10"
 plotly_survival(gg_p, strata_colours = tableau_color_pal("Tableau 10")(4),
                           plot_title="Survival of Something",
                           xaxis=list(title="days"),
